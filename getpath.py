@@ -10,7 +10,12 @@ except ImportError:
     print("Having the pyperclip module is recommend for full functionality. Do this by typing: 'pip install pyperclip' in the command line")
 
 # The base path
-BASE = "D:\\Programs\\code\\Python\\"
+# Your base path should be an absolute path
+BASE = None
+if not BASE:
+    print("No base path was provided. Will use the current directory. ")
+    BASE = getcwd()
+# BASE = "C:\\Programs\\code\\Python\\" # Example of an absolute path
 
 def main():
     """Main function, which takes care of the main handling."""
